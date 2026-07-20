@@ -8,13 +8,18 @@ export class AppController {
 
   @Get('hello')//decorator, e muda o caminho da rota
   getHello(): string {
-    return "qualquer coisa";
+    const retorno ='QUALQUER COISA';
+    return retorno;
   }
-  // sempre tem que pensar do começo ao fim da url/rota onde des do inicio do home ate o final do hello onde tem um caminho para se seguir.
-
+  
   @Get('exemplo')//decorator, e muda o caminho da rota
   exemplo() {
     return "exemplo de rota";
   }
+
+
+
+  // sempre tem que pensar do começo ao fim da url/rota onde des do inicio do home ate o final do hello onde tem um caminho para se seguir.
+
 
 }
