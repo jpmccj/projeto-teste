@@ -1,18 +1,18 @@
 import { Controller, Get } from '@nestjs/common';
-//import { AppService } from './app.service';
+import { AppService } from './app.service';
 
 
 @Controller('home')// muda o caminho da rota
 export class AppController {
-  //constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) {}
 
-  @Get('hello')//decorator, e muda o caminho da rota
+  //@Get('hello')//decorator, e muda o caminho da rota
   getHello(): string {
     const retorno ='QUALQUER COISA';
     return retorno;
   }
   
-  @Get('exemplo')//decorator, e muda o caminho da rota
+  //@Get('exemplo')//decorator, e muda o caminho da rota
   exemplo() {
     return "exemplo de rota";
   }
