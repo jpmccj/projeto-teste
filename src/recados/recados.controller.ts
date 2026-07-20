@@ -1,4 +1,5 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import path from 'path';
 
 @Controller('recados')
 export class RecadosController {
@@ -17,5 +18,19 @@ export class RecadosController {
     @Post()
     create(@Body() body: any){
         return body; 
+    }
+
+    @Patch(':id')
+    update(@Param('id') id: string, @Body() body: any){
+       
+        return {
+            id,
+            ...body
+        }
+    }
+
+    @Delete(':id')
+    delete(@Param('id') id: string){
+        return `Delete do ID: ${id} `;
     }
 }
